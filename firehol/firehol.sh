@@ -1,6 +1,9 @@
 # cd somewhere
 cd /tmp
 
+#To install them in debian/ubuntu, you need to run:
+sudo apt-get install autoconf autogen automake curl gcc git ipset kmod make pkg-config procps traceroute zlib1g-dev
+
 # download iprange and firehol from github
 git clone https://github.com/firehol/iprange.git iprange.git
 git clone https://github.com/firehol/firehol.git firehol.git
