@@ -49,7 +49,6 @@ if ! iptables -nvL INPUT|command grep -q "match-set $IPSET_BLACKLIST_NAME"; then
   # we may also have assumed that INPUT rule n°1 is about packets statistics (traffic monitoring)
   if [[ ${FORCE:-no} != yes ]]; then
     echo >&2 "Error: iptables does not have the needed ipset INPUT rule, add it using:"
-    echo >&2 "# iptables -I INPUT ${IPTABLES_IPSET_RULE_NUMBER:-1} -m set --match-set $IPSET_BLACKLIST_NAME src -j LOG --log-prefix "$IPSET_BLACKLIST_NAME: ""
     echo >&2 "# iptables -I INPUT ${IPTABLES_IPSET_RULE_NUMBER:-1} -m set --match-set $IPSET_BLACKLIST_NAME src -j DROP"
     exit 1
   fi
