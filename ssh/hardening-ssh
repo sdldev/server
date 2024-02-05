@@ -59,13 +59,6 @@ PrintMotd no
 X11Forwarding no
 
 ########## Authentication ##########
-
-# permit only the specified users to login
-#AllowUsers k4yt3x
-
-# permit only users within the specified groups to login
-#AllowGroups k4yt3x
-
 # uncomment the following options to permit only pubkey authentication
 # be aware that this will disable password authentication
 #   - AuthenticationMethods: permitted authentication methods
@@ -90,7 +83,7 @@ MaxAuthTries 3
 PermitEmptyPasswords no
 
 # prevent root from being logged in via SSH
-PermitRootLogin no
+PermitRootLogin yes
 
 # enable pubkey authentication
 PubkeyAuthentication yes
